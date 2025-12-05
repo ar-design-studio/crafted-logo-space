@@ -1,5 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
+import { Resend } from "https://esm.sh/resend@2.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -30,7 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
       from: "AR Design Studio <onboarding@resend.dev>",
       to: ["writetoasifur@gmail.com"],
       subject: `New Contact: ${subject}`,
-      replyTo: email,
+      reply_to: email,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
