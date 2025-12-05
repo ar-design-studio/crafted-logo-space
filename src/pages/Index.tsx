@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, ArrowRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, ArrowRight, Send, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import logo1 from "@/assets/logo-1.jpg";
 import logo2 from "@/assets/logo-2.jpg";
 import logo3 from "@/assets/logo-3.jpg";
@@ -9,6 +15,43 @@ import logo5 from "@/assets/logo-5.jpg";
 import logo6 from "@/assets/logo-6.jpg";
 
 const Index = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const portfolioItems = [
     { id: 1, image: logo1, title: "Brand Identity" },
     { id: 2, image: logo2, title: "Organic Flow" },
@@ -142,16 +185,78 @@ const Index = () => {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h3 className="text-4xl font-bold mb-6">Let's Create Together</h3>
-          <p className="text-xl text-muted-foreground mb-12">
-            Ready to bring your brand vision to life? Get in touch to discuss your logo design project.
-          </p>
-          <Button size="lg" className="group">
-            <Mail className="mr-2 h-5 w-5" />
-            Start Your Project
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+        <div className="container mx-auto max-w-xl">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold mb-6">Let's Create Together</h3>
+            <p className="text-xl text-muted-foreground">
+              Ready to bring your brand vision to life? Get in touch to discuss your logo design project.
+            </p>
+          </div>
+          
+          <Card className="p-8 border-border/50 shadow-lg">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input
+                    id="name"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="your@email.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="subject">Subject</Label>
+                <Input
+                  id="subject"
+                  placeholder="Project inquiry"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  required
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  placeholder="Tell me about your project..."
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                />
+              </div>
+              
+              <Button type="submit" size="lg" className="w-full group" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 h-5 w-5" />
+                    Send Message
+                  </>
+                )}
+              </Button>
+            </form>
+          </Card>
         </div>
       </section>
 
