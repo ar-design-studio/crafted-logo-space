@@ -64,7 +64,7 @@ const Index = () => {
     { id: 1, image: logo1, title: "Brand Identity", description: "" },
     { id: 2, image: logo2, title: "Organic Flow", description: "" },
     { id: 3, image: logo3, title: "Geometric Precision", description: "" },
-    { id: 4, image: sycoLogo, title: "SYCO — Synergy Combat", description: "A fierce emblem forged from twin shields and lightning bolts, capturing the relentless synergy of competitive esports. The interlocking crests symbolize unity in battle, while the crimson strikes channel raw energy and precision." },
+    { id: 4, image: sycoLogo, title: "SYCO — Synergy Combat", description: "Each trace represents the clan's core philosophy — Synergy Combat, capturing the relentless synergy of competitive esports." },
     { id: 5, image: logo5, title: "Circular Harmony", description: "" },
     { id: 6, image: logo6, title: "Connected Systems", description: "" },
   ];
