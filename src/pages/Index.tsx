@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -23,6 +23,14 @@ const Index = () => {
     subject: "",
     message: "",
   });
+
+  const scrollToSection = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,13 +78,13 @@ const Index = () => {
             AR Design Studio
           </h1>
           <div className="flex gap-8 items-center">
-            <a href="#work" className="text-foreground hover:text-primary transition-colors">
+            <a href="#work" onClick={(e) => scrollToSection(e, "work")} className="text-foreground hover:text-primary transition-colors">
               Work
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="text-foreground hover:text-primary transition-colors">
               About
             </a>
-            <a href="#contact">
+            <a href="#contact" onClick={(e) => scrollToSection(e, "contact")}>
               <Button variant="default" size="sm">
                 Contact
               </Button>
@@ -122,16 +130,16 @@ const Index = () => {
             {portfolioItems.map((item) => (
               <Card
                 key={item.id}
-                className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2"
               >
                 <div className="relative aspect-square overflow-hidden bg-muted">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-6 w-full">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                    <div className="p-6 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <h4 className="text-xl font-semibold text-foreground">{item.title}</h4>
                     </div>
                   </div>
