@@ -10,7 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import logo1 from "@/assets/logo-1.jpg";
 import logo2 from "@/assets/logo-2.jpg";
 import logo3 from "@/assets/logo-3.jpg";
-import logo4 from "@/assets/logo-4.jpg";
+import sycoLogo from "@/assets/syco-logo.png";
 import logo5 from "@/assets/logo-5.jpg";
 import logo6 from "@/assets/logo-6.jpg";
 
@@ -61,12 +61,12 @@ const Index = () => {
   };
 
   const portfolioItems = [
-    { id: 1, image: logo1, title: "Brand Identity" },
-    { id: 2, image: logo2, title: "Organic Flow" },
-    { id: 3, image: logo3, title: "Geometric Precision" },
-    { id: 4, image: logo4, title: "Abstract Fusion" },
-    { id: 5, image: logo5, title: "Circular Harmony" },
-    { id: 6, image: logo6, title: "Connected Systems" },
+    { id: 1, image: logo1, title: "Brand Identity", description: "" },
+    { id: 2, image: logo2, title: "Organic Flow", description: "" },
+    { id: 3, image: logo3, title: "Geometric Precision", description: "" },
+    { id: 4, image: sycoLogo, title: "SYCO — Synergy Combat", description: "A fierce emblem forged from twin shields and lightning bolts, capturing the relentless synergy of competitive esports. The interlocking crests symbolize unity in battle, while the crimson strikes channel raw energy and precision." },
+    { id: 5, image: logo5, title: "Circular Harmony", description: "" },
+    { id: 6, image: logo6, title: "Connected Systems", description: "" },
   ];
 
   return (
@@ -141,6 +141,9 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
                     <div className="p-6 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <h4 className="text-xl font-semibold text-foreground">{item.title}</h4>
+                      {item.description && (
+                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{item.description}</p>
+                      )}
                     </div>
                   </div>
                 </div>
