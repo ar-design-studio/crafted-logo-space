@@ -79,22 +79,22 @@ export const portfolioItems: ProjectData[] = [
   {
     id: 2,
     slug: "nume",
-    image: logo1,
-    title: "Numé",
+    image: numeMockup,
+    title: "Nume",
     description:
       "A refined wordmark where every letterform is sculpted with intentional grace — soft curves meet sharp serifs to evoke a sense of timeless luxury and quiet confidence.",
-    client: "Numé",
+    client: "Nume",
     year: "2024",
     category: "Brand Identity / Wordmark Design",
     challenge:
-      "Numé sought a wordmark that could transcend trends and anchor a luxury lifestyle brand. The identity needed to feel inherently elegant yet contemporary — readable at a glance, yet rewarding on closer inspection. It had to work seamlessly across packaging, editorial layouts, and digital touchpoints.",
+      "Nume sought a wordmark that could transcend trends and anchor a luxury lifestyle brand. The identity needed to feel inherently elegant yet contemporary — readable at a glance, yet rewarding on closer inspection. It had to work seamlessly across packaging, editorial layouts, and digital touchpoints.",
     solution:
-      "The wordmark was hand-drawn and then refined into precise vector geometry. Each letter carries subtle optical adjustments: the 'N' features a slightly tapered vertical stroke for grace, the 'u' and 'm' share a harmonised bowl radius for rhythm, and the accent on the 'é' acts as a delicate finishing flourish — like the final brushstroke of a calligrapher. The result is a logotype that breathes sophistication without shouting it.",
+      "The wordmark was hand-drawn and then refined into precise vector geometry. Each letter carries subtle optical adjustments: the 'N' features a slightly tapered vertical stroke for grace, the 'u' and 'm' share a harmonised bowl radius for rhythm, and the final 'e' acts as a delicate finishing flourish — like the final brushstroke of a calligrapher. The result is a logotype that breathes sophistication without shouting it.",
     designPhases: [
       {
         title: "Brand Immersion",
         description:
-          "Understanding Numé's world — its audience, aspirations, and aesthetic language. Studying luxury wordmarks across fashion, fragrance, and hospitality to identify what makes timelessness feel modern.",
+          "Understanding Nume's world — its audience, aspirations, and aesthetic language. Studying luxury wordmarks across fashion, fragrance, and hospitality to identify what makes timelessness feel modern.",
       },
       {
         title: "Calligraphic Exploration",
