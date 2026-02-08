@@ -6,6 +6,7 @@ import logo5 from "@/assets/logo-5.jpg";
 import logo6 from "@/assets/logo-6.jpg";
 import xpadLogo from "@/assets/xpadstudio-logo.svg";
 import numeMockup from "@/assets/nume-mockup.svg";
+import numeLogo from "@/assets/nume-logo.svg";
 
 export interface DesignPhase {
   title: string;
@@ -79,7 +80,7 @@ export const portfolioItems: ProjectData[] = [
   {
     id: 2,
     slug: "nume",
-    image: numeMockup,
+    image: numeLogo,
     title: "Nume",
     description:
       "A refined wordmark where every letterform is sculpted with intentional grace — soft curves meet sharp serifs to evoke a sense of timeless luxury and quiet confidence.",
