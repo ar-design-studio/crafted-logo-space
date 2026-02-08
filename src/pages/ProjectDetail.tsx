@@ -32,7 +32,7 @@ const ProjectDetail = () => {
       <section className="pt-28 pb-16 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-muted flex items-center justify-center shadow-2xl">
+            <div className={`aspect-square rounded-2xl overflow-hidden flex items-center justify-center shadow-2xl ${project.slug === 'xpadstudio' ? 'bg-white' : 'bg-muted'}`}>
               <img
                 src={project.image}
                 alt={project.title}
