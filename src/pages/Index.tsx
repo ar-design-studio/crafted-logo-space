@@ -135,7 +135,7 @@ const Index = () => {
             {portfolioItems.map((item) => (
               <Link key={item.id} to={`/project/${item.slug}`}>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2">
-                  <div className="relative aspect-square overflow-hidden bg-muted">
+                  <div className={`relative aspect-square overflow-hidden ${item.slug === 'xpadstudio' ? 'bg-white' : 'bg-muted'}`}>
                     <img
                       src={item.image}
                       alt={item.title}
