@@ -187,9 +187,9 @@ const ProjectDetail = () => {
       {/* Footer CTA */}
       <section className="py-16 px-6 border-t border-border">
         <div className="container mx-auto max-w-4xl text-center">
-          <h3 className="text-2xl font-bold mb-4">Like what you see?</h3>
+          <h3 className="text-2xl font-bold mb-4">Ready to elevate your brand?</h3>
           <p className="text-muted-foreground mb-8">
-            Let's discuss how I can craft a distinctive identity for your brand.
+            Every great brand starts with a conversation. Let's create something extraordinary together.
           </p>
           <Link to="/#contact">
             <Button size="lg">Get in Touch</Button>

@@ -5,9 +5,6 @@ import sycoLogo from "@/assets/syco-logo.png";
 import logo5 from "@/assets/logo-5.jpg";
 import logo6 from "@/assets/logo-6.jpg";
 import xpadLogo from "@/assets/xpadstudio-logo.svg";
-import mockupCard from "@/assets/mockup-xpadstudio-card.jpg";
-import mockupWall from "@/assets/mockup-xpadstudio-wall.jpg";
-import mockupStationery from "@/assets/mockup-xpadstudio-stationery.jpg";
 
 export interface DesignPhase {
   title: string;
@@ -71,7 +68,7 @@ export const portfolioItems: ProjectData[] = [
           "Pixel-hinting for small sizes, preparing vector masters in SVG and AI, and producing a concise brand-guideline document covering clear-space rules, minimum sizes, and co-branding lockups.",
       },
     ],
-    mockups: [mockupCard, mockupWall, mockupStationery],
+    mockups: [],
     colors: [
       { name: "Teal Energy", hex: "#00C4B4" },
       { name: "Charcoal Depth", hex: "#333333" },
