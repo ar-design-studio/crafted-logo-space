@@ -125,16 +125,16 @@ export const portfolioItems: ProjectData[] = [
       { name: "Champagne Gold", hex: "#C9A96E" },
     ],
   },
-  { id: 3, slug: "organic-flow", image: logo2, title: "Organic Flow", description: "" },
-  { id: 4, slug: "geometric-precision", image: logo3, title: "Geometric Precision", description: "" },
   {
-    id: 5,
+    id: 3,
     slug: "syco",
     image: sycoLogo,
     title: "SYCO — Synergy Combat",
     description:
       "Each trace represents the clan's core philosophy — Synergy Combat, capturing the relentless synergy of competitive esports.",
   },
+  { id: 4, slug: "organic-flow", image: logo2, title: "Organic Flow", description: "" },
+  { id: 5, slug: "geometric-precision", image: logo3, title: "Geometric Precision", description: "" },
   { id: 6, slug: "circular-harmony", image: logo5, title: "Circular Harmony", description: "" },
   { id: 7, slug: "connected-systems", image: logo6, title: "Connected Systems", description: "" },
 ];
