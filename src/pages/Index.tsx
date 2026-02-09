@@ -135,11 +135,13 @@ const Index = () => {
             {portfolioItems.map((item) => (
               <Link key={item.id} to={`/project/${item.slug}`}>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2">
-                  <div className={`relative aspect-square overflow-hidden ${item.slug === 'xpadstudio' ? 'bg-white' : 'bg-muted'}`}>
+                  <div className={`relative aspect-square overflow-hidden ${['xpadstudio', 'nume'].includes(item.slug) ? 'bg-white' : 'bg-muted'}`}>
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-700 ease-out"
+                      className={`w-full h-full group-hover:scale-110 group-hover:rotate-1 transition-all duration-700 ease-out ${
+                        item.slug === 'nume' ? 'object-contain p-12' : 'object-cover'
+                      }`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
                       <div className="p-6 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
