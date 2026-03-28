@@ -206,6 +206,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Waitlist Section */}
+      <WaitlistSection />
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-muted/30">
         <div className="container mx-auto max-w-xl">
