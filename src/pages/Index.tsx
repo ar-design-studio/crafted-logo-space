@@ -9,6 +9,7 @@ import { ArrowRight, Send, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { portfolioItems } from "@/data/projects";
+import WaitlistSection from "@/components/WaitlistSection";
 
 const Index = () => {
   const { toast } = useToast();
