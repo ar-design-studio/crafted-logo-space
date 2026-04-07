@@ -1,9 +1,4 @@
-import logo1 from "@/assets/logo-1.jpg";
-import logo2 from "@/assets/logo-2.jpg";
-import logo3 from "@/assets/logo-3.jpg";
 import sycoLogo from "@/assets/syco-logo.png";
-import logo5 from "@/assets/logo-5.jpg";
-import logo6 from "@/assets/logo-6.jpg";
 import xpadLogo from "@/assets/xpadstudio-logo.svg";
 import numeMockup from "@/assets/nume-mockup.svg";
 import numeLogo from "@/assets/nume-logo.svg";
@@ -133,8 +128,4 @@ export const portfolioItems: ProjectData[] = [
     description:
       "Each trace represents the clan's core philosophy — Synergy Combat, capturing the relentless synergy of competitive esports.",
   },
-  { id: 4, slug: "organic-flow", image: logo2, title: "Organic Flow", description: "" },
-  { id: 5, slug: "geometric-precision", image: logo3, title: "Geometric Precision", description: "" },
-  { id: 6, slug: "circular-harmony", image: logo5, title: "Circular Harmony", description: "" },
-  { id: 7, slug: "connected-systems", image: logo6, title: "Connected Systems", description: "" },
 ];
