@@ -164,7 +164,7 @@ export const portfolioItems: ProjectData[] = [
     mockups: [],
     colors: [
       { name: "Combat Black", hex: "#0A0A0A" },
-      { name: "Synergy Neon", hex: "#C6FF3D" },
+      { name: "Pure White", hex: "#FFFFFF" },
       { name: "Steel Grey", hex: "#2A2A2A" },
     ],
   },
