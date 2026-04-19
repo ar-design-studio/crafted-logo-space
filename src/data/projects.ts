@@ -153,7 +153,7 @@ export const portfolioItems: ProjectData[] = [
       {
         title: "Color & Application",
         description:
-          "Defining a high-contrast palette tuned for dark mode streaming environments, then stress-testing the mark across jerseys, overlays, thumbnails, and social avatars.",
+          "Defining a high-contrast monochrome palette tuned for dark mode streaming environments, then stress-testing the mark across jerseys, overlays, thumbnails, and social avatars.",
       },
       {
         title: "Brand System Delivery",
