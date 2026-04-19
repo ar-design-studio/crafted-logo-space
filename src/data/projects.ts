@@ -127,5 +127,45 @@ export const portfolioItems: ProjectData[] = [
     title: "SYCO — Synergy Combat",
     description:
       "Each trace represents the clan's core philosophy — Synergy Combat, capturing the relentless synergy of competitive esports.",
+    client: "SYCO Esports",
+    year: "2024",
+    category: "Brand Identity / Esports Logo",
+    challenge:
+      "SYCO needed a clan identity that could hold its own across stream overlays, jerseys, social avatars, and tournament broadcasts. The mark had to feel aggressive and competitive without slipping into generic esports clichés — sharp enough to intimidate opponents, refined enough to anchor a long-term brand.",
+    solution:
+      "The logomark fuses an angular monogram with kinetic energy lines, encoding the clan's philosophy of Synergy Combat — individual players moving as one weaponised unit. Each stroke is engineered on a strict diagonal grid, creating forward motion and tension. A high-contrast palette of neon accent against deep black gives the mark instant readability on dark stream overlays while staying punchy on light merchandise.",
+    designPhases: [
+      {
+        title: "Clan Discovery",
+        description:
+          "Workshops with the founding roster to distil SYCO's competitive identity, team values, and the cultural references that shape their playstyle and community voice.",
+      },
+      {
+        title: "Concept Exploration",
+        description:
+          "Sketching dozens of monogram directions — from sharp tactical glyphs to fluid motion marks — narrowing to the angular construction that best embodied coordinated aggression.",
+      },
+      {
+        title: "Geometric Refinement",
+        description:
+          "Rebuilding the chosen concept on a diagonal grid system, calibrating stroke weights and negative space so the mark stays legible from a 24px Discord avatar to a 4m tournament backdrop.",
+      },
+      {
+        title: "Color & Application",
+        description:
+          "Defining a high-contrast palette tuned for dark mode streaming environments, then stress-testing the mark across jerseys, overlays, thumbnails, and social avatars.",
+      },
+      {
+        title: "Brand System Delivery",
+        description:
+          "Packaging master files, lockup variations, clear-space rules, and a usage guide for content creators, ensuring every appearance of the mark reinforces the clan's identity.",
+      },
+    ],
+    mockups: [],
+    colors: [
+      { name: "Combat Black", hex: "#0A0A0A" },
+      { name: "Synergy Neon", hex: "#C6FF3D" },
+      { name: "Steel Grey", hex: "#2A2A2A" },
+    ],
   },
 ];
