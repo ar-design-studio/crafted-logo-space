@@ -133,7 +133,7 @@ export const portfolioItems: ProjectData[] = [
     challenge:
       "SYCO needed a clan identity that could hold its own across stream overlays, jerseys, social avatars, and tournament broadcasts. The mark had to feel aggressive and competitive without slipping into generic esports clichés — sharp enough to intimidate opponents, refined enough to anchor a long-term brand.",
     solution:
-      "The logomark fuses an angular monogram with kinetic energy lines, encoding the clan's philosophy of Synergy Combat — individual players moving as one weaponised unit. Each stroke is engineered on a strict diagonal grid, creating forward motion and tension. A high-contrast monochrome palette of crisp white against deep black gives the mark instant readability on dark stream overlays while staying punchy on light merchandise.",
+      "The logomark fuses an angular shield monogram with kinetic lightning bolts, encoding the clan's philosophy of Synergy Combat — individual players moving as one weaponised unit. Each stroke is engineered on a strict diagonal grid, creating forward motion and tension. A bold palette of crimson red against deep black, balanced by crisp white, gives the mark instant readability on dark stream overlays while staying punchy on light merchandise.",
     designPhases: [
       {
         title: "Clan Discovery",
@@ -153,7 +153,7 @@ export const portfolioItems: ProjectData[] = [
       {
         title: "Color & Application",
         description:
-          "Defining a high-contrast monochrome palette tuned for dark mode streaming environments, then stress-testing the mark across jerseys, overlays, thumbnails, and social avatars.",
+          "Defining a bold red-on-black palette tuned for dark mode streaming environments, then stress-testing the mark across jerseys, overlays, thumbnails, and social avatars.",
       },
       {
         title: "Brand System Delivery",
@@ -164,8 +164,8 @@ export const portfolioItems: ProjectData[] = [
     mockups: [],
     colors: [
       { name: "Combat Black", hex: "#0A0A0A" },
+      { name: "Crimson Strike", hex: "#E04E4E" },
       { name: "Pure White", hex: "#FFFFFF" },
-      { name: "Steel Grey", hex: "#2A2A2A" },
     ],
   },
 ];
