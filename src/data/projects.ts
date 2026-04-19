@@ -133,7 +133,7 @@ export const portfolioItems: ProjectData[] = [
     challenge:
       "SYCO needed a clan identity that could hold its own across stream overlays, jerseys, social avatars, and tournament broadcasts. The mark had to feel aggressive and competitive without slipping into generic esports clichés — sharp enough to intimidate opponents, refined enough to anchor a long-term brand.",
     solution:
-      "The logomark fuses an angular monogram with kinetic energy lines, encoding the clan's philosophy of Synergy Combat — individual players moving as one weaponised unit. Each stroke is engineered on a strict diagonal grid, creating forward motion and tension. A high-contrast palette of neon accent against deep black gives the mark instant readability on dark stream overlays while staying punchy on light merchandise.",
+      "The logomark fuses an angular monogram with kinetic energy lines, encoding the clan's philosophy of Synergy Combat — individual players moving as one weaponised unit. Each stroke is engineered on a strict diagonal grid, creating forward motion and tension. A high-contrast monochrome palette of crisp white against deep black gives the mark instant readability on dark stream overlays while staying punchy on light merchandise.",
     designPhases: [
       {
         title: "Clan Discovery",
